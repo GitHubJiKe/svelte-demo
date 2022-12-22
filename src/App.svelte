@@ -4,6 +4,8 @@
   import "papercss";
   import Counter from "./Counter.svelte";
   import Link from "./components/Link.svelte";
+  import Alert from "./components/Alert.svelte";
+  import Article from "./components/Article.svelte";
 
   const count = writable(100);
 
@@ -13,9 +15,11 @@
   });
 </script>
 
-<div class="text-center">
+<div>
+  <Alert type="danger">你好</Alert>
   <h1>Hello {name}!</h1>
   <Link url="/"><h2>home</h2></Link>
+  <Article />
   <p>
     <Counter />
     <Counter value={1}>Counter 1</Counter>

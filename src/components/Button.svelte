@@ -1,16 +1,11 @@
 <script lang="ts">
+  import { CommonWarningTypes } from "../types";
   import Link from "./Link.svelte";
 
   export let onClick: () => void;
   export let size: "large" | "default" | "small" = "default";
   export let type: "link" | "block" | undefined = undefined;
-  export let color:
-    | "primary"
-    | "secondary"
-    | "success"
-    | "warning"
-    | "danger"
-    | undefined = undefined;
+  export let color: CommonWarningTypes | undefined = undefined;
   export let outline: boolean = false;
   export let disabled: boolean = false;
   export let url: string = "";
